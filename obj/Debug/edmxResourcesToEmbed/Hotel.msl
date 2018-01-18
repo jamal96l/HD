@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HotelModelStoreContainer" CdmEntityContainer="HotelEntities">
+    <EntitySetMapping Name="Comodidads">
+      <EntityTypeMapping TypeName="HotelModel.Comodidad">
+        <MappingFragment StoreEntitySet="Comodidad">
+          <ScalarProperty Name="ID_Comodidad" ColumnName="ID_Comodidad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estadoes">
+      <EntityTypeMapping TypeName="HotelModel.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="ID_Estado" ColumnName="ID_Estado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habitacions">
+      <EntityTypeMapping TypeName="HotelModel.Habitacion">
+        <MappingFragment StoreEntitySet="Habitacion">
+          <ScalarProperty Name="ID_Habitacion" ColumnName="ID_Habitacion" />
+          <ScalarProperty Name="ID_Estado" ColumnName="ID_Estado" />
+          <ScalarProperty Name="Extension_Telefonica" ColumnName="Extension_Telefonica" />
+          <ScalarProperty Name="ID_Tipo" ColumnName="ID_Tipo" />
+          <ScalarProperty Name="ID_Hotel" ColumnName="ID_Hotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="HotelModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="ID_Hotel" ColumnName="ID_Hotel" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Huespeds">
+      <EntityTypeMapping TypeName="HotelModel.Huesped">
+        <MappingFragment StoreEntitySet="Huesped">
+          <ScalarProperty Name="ID_Huesped" ColumnName="ID_Huesped" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+          <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservas">
+      <EntityTypeMapping TypeName="HotelModel.Reserva">
+        <MappingFragment StoreEntitySet="Reserva">
+          <ScalarProperty Name="ID_Reserva" ColumnName="ID_Reserva" />
+          <ScalarProperty Name="ID_Habitacion" ColumnName="ID_Habitacion" />
+          <ScalarProperty Name="ID_Huesped" ColumnName="ID_Huesped" />
+          <ScalarProperty Name="Fecha_CheckIn" ColumnName="Fecha_CheckIn" />
+          <ScalarProperty Name="Fecha_CheckOut" ColumnName="Fecha_CheckOut" />
+          <ScalarProperty Name="Cantidad_Adultos" ColumnName="Cantidad_Adultos" />
+          <ScalarProperty Name="Cantidad_Niños" ColumnName="Cantidad_Niños" />
+          <ScalarProperty Name="Huespedes_Adicionales" ColumnName="Huespedes_Adicionales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="HotelModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Habitacion">
+      <EntityTypeMapping TypeName="HotelModel.Tipo_Habitacion">
+        <MappingFragment StoreEntitySet="Tipo_Habitacion">
+          <ScalarProperty Name="ID_Tipo" ColumnName="ID_Tipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Precio_Dia" ColumnName="Precio_Dia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Valores_Generales">
+      <EntityTypeMapping TypeName="HotelModel.Valores_Generales">
+        <MappingFragment StoreEntitySet="Valores_Generales">
+          <ScalarProperty Name="Cedula_Juridica" ColumnName="Cedula_Juridica" />
+          <ScalarProperty Name="Nombre_Empresa" ColumnName="Nombre_Empresa" />
+          <ScalarProperty Name="Impuesto_Venta" ColumnName="Impuesto_Venta" />
+          <ScalarProperty Name="Impuesto_Consumo" ColumnName="Impuesto_Consumo" />
+          <ScalarProperty Name="Impuesto_Servicio" ColumnName="Impuesto_Servicio" />
+          <ScalarProperty Name="Propietario" ColumnName="Propietario" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Hora_CheckIn" ColumnName="Hora_CheckIn" />
+          <ScalarProperty Name="Hora_CheckOut" ColumnName="Hora_CheckOut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Huesped_Reserva" TypeName="HotelModel.Huesped_Reserva" StoreEntitySet="Huesped_Reserva">
+      <EndProperty Name="Huesped">
+        <ScalarProperty Name="ID_Huesped" ColumnName="ID_Huesped" />
+      </EndProperty>
+      <EndProperty Name="Reserva">
+        <ScalarProperty Name="ID_Reserva" ColumnName="ID_Reserva" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TipoH_Comodidad" TypeName="HotelModel.TipoH_Comodidad" StoreEntitySet="TipoH_Comodidad">
+      <EndProperty Name="Comodidad">
+        <ScalarProperty Name="ID_Comodidad" ColumnName="ID_Comodidad" />
+      </EndProperty>
+      <EndProperty Name="Tipo_Habitacion">
+        <ScalarProperty Name="ID_Tipo" ColumnName="ID_Tipo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="HotelModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="HotelModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="HotelModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="HotelModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HotelModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="HotelModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HotelModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="HotelModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="HotelModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
