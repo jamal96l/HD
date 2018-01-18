@@ -8,7 +8,19 @@ namespace HotelDesktop.Class
 {
     class Estado
     {
-        private int ID_Estado { get; set; }
-        private String Nombre { get; set; }
+        private int _IdEstado;
+        private string _Nombre;
+
+        public int IdEstado
+        {
+            get { return _IdEstado; }
+            set { _IdEstado = value; }
+        }
+        public string Nombre
+        {
+            get { return _Nombre; }
+            set { _Nombre = value; }
+        }
+
     }
 }
