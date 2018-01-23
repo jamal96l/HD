@@ -8,7 +8,19 @@ namespace HotelDesktop.Class
 {
     class TipoHabitacionComodidad
     {
-        private int ID_Comodidad { get; set; }
-        private int ID_Tipo { get; set; }
+        private int _IdComodidad;
+        private int _IdTipo;
+
+        public int IdComodidad
+        {
+            get { return _IdComodidad; }
+            set { _IdComodidad = value; }
+        }
+
+        public int IdTipo
+        {
+            get { return _IdTipo; }
+            set { _IdTipo = value; }
+        }
     }
 }
