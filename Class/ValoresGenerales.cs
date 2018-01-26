@@ -8,15 +8,15 @@ namespace HotelDesktop.Class
 {
     class ValoresGenerales
     {
-        public int _CedulaJuridica;
-        public string _NombreEmpresa;
-        public int _ImpuestoVenta;
-        public int _ImpuestoConsumo;
-        public int _ImpuestoServicio;
-        public string _Propietario;
-        public string _Direccion;
-        public TimeSpan _HoraCheckIn;
-        public TimeSpan _HoraCheckOut;
+        private int _CedulaJuridica;
+        private string _NombreEmpresa;
+        private int _ImpuestoVenta;
+        private int _ImpuestoConsumo;
+        private int _ImpuestoServicio;
+        private string _Propietario;
+        private string _Direccion;
+        private TimeSpan _HoraCheckIn;
+        private TimeSpan _HoraCheckOut;
 
         public int CedulaJuridica
         {
